@@ -4,7 +4,9 @@ export default class NavBar extends Component {// atalho rcc SEMPRE CRIAR CLASSE
   render() {
     return (
       <div>
-        <h1>Teste</h1>
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <a>pokedex</a>
+        </nav>
       </div>
     )
   }
