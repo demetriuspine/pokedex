@@ -10,3 +10,8 @@
   justify-content: flex-start !important;
   padding: 1%;
 }
+
+.pokemon-img {
+  width: 5em !important;
+  height: 5em !important;
+}

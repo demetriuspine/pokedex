@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class PokemonCard extends Component {
   state = {
@@ -10,7 +10,7 @@ export default class PokemonCard extends Component {
   componentDidMount() {
     const {name, url} = this.props;
     const pokemonIndex = url.split("/")[url.split("/").length - 2]
-    const imageUrl = `https://github.com/PokeApi/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`
     this.setState(
       {
         name,
@@ -27,9 +27,12 @@ export default class PokemonCard extends Component {
           <h5 className="card-header">
             {this.state.pokemonIndex}
           </h5>
+          <img className="pokemon-img card-image-top rounded mx-auto nt-2" src={this.state.imageUrl}>
+
+          </img>
           <div className="card-body mx-auto">
             <h6 className="card-title">{this.state.name.toLowerCase()
-              .split('-').map(letter => letter.charAt(0).toUpperCase() + letter
+              .split('-').map((letter) => letter.charAt(0).toUpperCase() + letter
               .substring(1)).join(' ')}</h6>
           </div>
         </div>
